@@ -52,4 +52,5 @@ week.sales[, `:=`(log.sales=log10(1+week.sale), log.base=log10(1+base.week.sales
 # week.sales[ ,c("week","year", "base.week.sales", "promotion.id", "week.sale", "log.base", "mult.resid") := NULL]
 week.sales$month <- factor(week.sales$month)
 
-modelo <- glm(log.sales ~ month + StoreId + ItemId + promotion.desc, data=week.sales)
+modelo.2 <- glm(log.sales ~ month + StoreId + ItemId + promotion.desc, data=week.sales)
+
